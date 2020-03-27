@@ -7,7 +7,7 @@ library(tools)
 args = commandArgs(trailingOnly=TRUE)
 
 # Read inputs
-snp_mat <- read.table(file_path_as_absolute(args[1]), header = T)
+snp_mat <- read.table(file_path_as_absolute(args[1]), header = T, , sep = "\t", row.names = 1)
 nwk <- file_path_as_absolute(args[2])
 report <- file_path_as_absolute(args[3])
 
