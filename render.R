@@ -12,4 +12,4 @@ nwk <- file_path_as_absolute(args[2])
 report <- file_path_as_absolute(args[3])
 
 # Render the report
-render(report, output_file='monroe_report.pdf')
+render(report, output_file='report.pdf')
