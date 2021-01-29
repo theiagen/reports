@@ -275,8 +275,8 @@ ggsave('ML_tree.png', units = "in", width = 8.5, height = 10)
 
 ### Methods
 
-The figures shown here were generated using sequence data processed with the cluster_analysis pipeline from the [Monroe workflow](https://github.com/StaPH-B/staphb_toolkit/tree/dev).
+The figures shown here were generated using sequence data processed with the [genomic_cluster_analysis pipeline](https://github.com/AndrewLangvt/genomic_analyses/blob/main/workflows/wf_genomic_cluster_analysis.wdl).
 
-Monroe cluster_analysis uses [Mafft](https://mafft.cbrc.jp/alignment/software/) to perform multiple-sequence alignment of all SARS-CoV-2 genomes provided. The resulting alignment fasta file is used to generate a pairwise-snp distance matrix with [snp-dists](https://github.com/tseemann/snp-dists) and a maximum-likelihood phylogeneitc tree with [IQ-Tree](http://www.iqtree.org/).
+The genomic_cluster_analysis pipeline uses [Mafft](https://mafft.cbrc.jp/alignment/software/) to perform multiple-sequence alignment of all SARS-CoV-2 genomes provided. The resulting alignment fasta file is used to generate a pairwise-snp distance matrix with [snp-dists](https://github.com/tseemann/snp-dists) and a maximum-likelihood phylogeneitc tree with [IQ-Tree](http://www.iqtree.org/).
 
-Output from snp-dists and IQ-Tree are curated into a single pdf report using the [StaPH-B cluster-report-env](https://hub.docker.com/r/staphb/cluster-report-env)
+Output from snp-dists and IQ-Tree are curated into a single pdf report using the [Theiagen cluster-report-env](https://hub.docker.com/repository/docker/theiagen/cluster-report-env).
