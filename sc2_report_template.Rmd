@@ -273,6 +273,6 @@ ggsave('ML_tree.png', units = "in", width = 8.5, height = 10)
 
 The figures shown here were generated using sequence data processed with the [genomic_cluster_analysis pipeline](https://github.com/AndrewLangvt/genomic_analyses/blob/main/workflows/wf_genomic_cluster_analysis.wdl).
 
-The genomic_cluster_analysis pipeline uses [Mafft](https://mafft.cbrc.jp/alignment/software/) to perform multiple-sequence alignment of all SARS-CoV-2 genomes provided. The resulting alignment fasta file is used to generate a pairwise-snp distance matrix with [snp-dists](https://github.com/tseemann/snp-dists) and a maximum-likelihood phylogeneitc tree with [IQ-Tree](http://www.iqtree.org/).
+The Titan_Augur_Run  pipeline uses [Augur](https://github.com/nextstrain/augur) to perform multiple-sequence alignment (MSA) and build a Maximum-Liklihood tree of all SARS-CoV-2 genomes provided. The MSA file is used to generate a pairwise-snp distance matrix with [snp-dists](https://github.com/tseemann/snp-dists).
 
-Output from snp-dists and IQ-Tree are curated into a single pdf report using the [Theiagen cluster-report-env](https://hub.docker.com/repository/docker/theiagen/cluster-report-env).
+Output from Augur and snp-dists are curated into a single pdf report using the [Theiagen cluster-report-env](https://hub.docker.com/repository/docker/theiagen/cluster-report-env).
